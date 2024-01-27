@@ -1,22 +1,26 @@
+# Minimum CMake version required
 cmake_minimum_required(VERSION 3.22)
 
+# Project name
 project(unitTesting)
 
-# Add sources
-add_executable(program main.cpp stack.cpp)
+# Create an executable with main.cpp and stack.cpp as sources
+add_executable(program src/main.cpp src/stack.cpp)
 
+# Enable testing
 enable_testing()
 
-# Add test executable
-add_executable(tests tests.cpp stack.cpp)
+# Create an executable for tests using tests.cpp and stack.cpp
+add_executable(tests src/tests.cpp src/stack.cpp)
 
-# Making GTest library discoverable
+# Find and include GTest library
 find_package(GTest REQUIRED)
 
-# Link against GTest library
+# Link the 'tests' executable against the GTest library
 target_link_libraries(tests GTest::gtest_main)
 
-# CMake specific config
+# Include GoogleTest for CMake configuration
 include(GoogleTest)
 
+# Discover tests for the 'tests' executable
 gtest_discover_tests(tests)

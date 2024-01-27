@@ -1,4 +1,4 @@
-#include "stack.hpp"
+#include "../include/stack.hpp"
 #include <iostream>
 #include <stdexcept>
 
@@ -24,7 +24,7 @@ void Stack::resize() {
 		newArray[i] = stackArray[i];
 	}
 	
-	// Delete the old one
+	// Delete the old one (maybe after for multithreading)
 	delete[] stackArray;
 	
 	// Update the necessary
