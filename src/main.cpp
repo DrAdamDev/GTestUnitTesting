@@ -1,5 +1,5 @@
 #include "../include/stack.hpp"
-#include "../../GitProject/print.hpp"
+#include "../../gitProject/print.hpp"
 #include <iostream>
 
 int main() {

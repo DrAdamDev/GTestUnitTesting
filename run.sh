@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define absolute path
-path="/home/dradamdev/Projects/C++Projects/homework/unitTesting"
+path="/home/dradamdev/Projects/C++Projects/unitTesting"
 
 # Go to project root
 cd $path || exit 1
